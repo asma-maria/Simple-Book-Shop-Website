@@ -10,6 +10,7 @@ export default function Homepage() {
        <Navbar></Navbar>
        <Banner></Banner>
        <ProductList></ProductList>
+       <Footer></Footer>
       
     </div>
   )

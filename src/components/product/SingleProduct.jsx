@@ -4,28 +4,42 @@ import { ROUTES } from "../../routes";
 
 export default function SingleProduct(props) {
   const { product } = props;
+
   return (
-    <Link >
-      <div className="bg-white p-3 shadow rounded border border-red-100 space-y-4 relative">
-        <span className="absolute top-0 right-0 bg-gray-400 p-1 rounded">
-          10%
-        </span>
-        <div className="bg-gray-100">
-          <img
-            src={product.image}
-            alt=""
-          />
+
+      <Link to={ROUTES.SINGLE_PRODUCTS.DYNAMIC(product.bookId)}>
+      <div className="card glass w-100 shadow rounded border border-red-100 space-y-4 relative gap-6">
+      <figure>
+        <img
+          src={product.image}
+          alt="car!" />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title "> Book Title: {product.bookName}</h2>
+        <div>
+          Tags: {product.tags && product.tags.map((tag,index)=>{
+            return(
+              <>
+               {index?',': ' '}{tag}
+              </>
+            )
+          }
+
+          )}
         </div>
-        <p className="text-xs font-semibold" title={product?.bookName}>
-         
-        </p>
-        <button
-          type="button"
-          className="bg-orange-900 rounded px-3 text-white py-2"
-        >
-          Add to Cart
-        </button>
+        <h3 className="card-title "> Author: {product.author}</h3>
+        <h3 className="card-title "> Category: {product.category}</h3>
+        <h3 className="card-title "> Author: {product.rating}</h3>
+
+        <div className="card-actions justify-end">
+          <Link to={ROUTES.SINGLE_PRODUCTS.DYNAMIC(product.bookId)} className="btn btn-primary">Details</Link>
+        </div>
       </div>
-    </Link>
+    </div>
+      
+      
+      </Link>
+  
+ 
   );
 }
