@@ -34,7 +34,7 @@ export default function ProductsDetailsPage() {
   return (
    
    <div className='flex flex-col gap-4'>
-     <div className="card lg:card-side bg-base-100 shadow-xl">
+     <div className="card lg:card-side bg-base-100 shadow-xl ">
       
       <img src={book?.image} alt={book?.bookName} />
       <div className="card-body justify-center">

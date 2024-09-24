@@ -1,7 +1,7 @@
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Homepage from '../pages/Homepage'
 import About from '../components/About'
-import ProductList from '../components/product/ProductList'
+
 
 import ProductsDetailsPage from '../pages/ProductsDetailsPage'
 import { ROUTES } from '../routes'
@@ -9,6 +9,8 @@ import { ROUTES } from '../routes'
 import FaqPage from '../pages/FaqPage'
 import NotFound from '../components/NotFound'
 import Blog from '../components/Blog'
+import BuyBook from '../pages/BuyBook'
+import SingIn from '../pages/SingIn'
 
 
 export const router= createBrowserRouter([
@@ -25,7 +27,7 @@ export const router= createBrowserRouter([
 
       {
         path:"/books",
-        element:<ProductList></ProductList>
+        element:<BuyBook></BuyBook>
       }
       ,
       {
@@ -45,7 +47,12 @@ export const router= createBrowserRouter([
       {
         path:"/blog",
         element:<Blog></Blog>
+      },
+      {
+        path:"/signin",
+        element:<SingIn></SingIn>
       }
+     
 
 
 

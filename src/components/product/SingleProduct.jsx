@@ -9,7 +9,7 @@ export default function SingleProduct(props) {
 
       <Link to={ROUTES.SINGLE_PRODUCTS.DYNAMIC(product.bookId)}>
         
-      <div className="card glass w-100 shadow rounded border border-red-300 gap-6">
+      <div className="card glass w-100 shadow rounded border border-red-00 gap-6">
       <figure>
         <img className="w-full h-72 object-cover"
           src={product.image}

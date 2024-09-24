@@ -52,7 +52,7 @@ export default function navbar() {
   
     <Link to="/books" className="btn bg-green-300  hover:text-orange-600" >Buy Book</Link>
     
-    <a className="btn bg-cyan-500 hover:text-orange-600">Sign in</a>
+    <Link to="/signin" className="btn bg-cyan-500 hover:text-orange-600">Sign in</Link>
   </div>
 </div>
 
