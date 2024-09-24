@@ -1,7 +1,11 @@
 import React from 'react'
 import logo from "../../images/logo.jpg"
+import { useNavigate } from 'react-router-dom'
+import { NavLink,Link } from 'react-router-dom';
+import { ROUTES } from '../../routes';
 
 export default function navbar() {
+    
   return (
     <header className='font-serif drop-shadow-lg '> 
         <div className="navbar bg-base-100">
@@ -28,21 +32,25 @@ export default function navbar() {
         <li><a className='hover:text-orange-600'>About</a></li>
         <li><a className='hover:text-orange-600'> Blog </a></li>
         <li><a className='hover:text-orange-600'>FAQ </a></li>
+        
       </ul>
     </div>
-    <img src={logo} alt="Logo" className='w-12 h-12' />
-    <a className="btn btn-ghost text-xl"> BOOK CLUB </a>
+   
+    <Link to={ROUTES.HOME}><img src={logo} alt="Logo" className='w-12 h-12' /></Link>
+    <Link to={ROUTES.HOME}><a className="btn btn-ghost text-xl"> BOOK CLUB </a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a className='hover:text-orange-600'> Home </a></li>
-      <li><a className='hover:text-orange-600'> About </a></li>
+      <li><Link to={ROUTES.HOME} className='hover:text-orange-600'> Home </Link></li>
+      <li><Link to={ROUTES.ABOUT} className='hover:text-orange-600'> About </Link></li>
       <li><a className='hover:text-orange-600'> Blog </a></li>
       <li><a className='hover:text-orange-600'>FAQ </a></li>
+      <link></link>
     </ul>
   </div>
   <div className="navbar-end flex gap-3">
-    <a className="btn bg-green-300  hover:text-orange-600">Buy Book</a>
+  
+    <a className="btn bg-green-300  hover:text-orange-600" >Buy Book</a>
     
     <a className="btn bg-cyan-500 hover:text-orange-600">Sign in</a>
   </div>
