@@ -7,6 +7,7 @@ import ProductsDetailsPage from '../pages/ProductsDetailsPage'
 import { ROUTES } from '../routes'
 
 import FaqPage from '../pages/FaqPage'
+import NotFound from '../components/NotFound'
 
 
 export const router= createBrowserRouter([
@@ -34,7 +35,13 @@ export const router= createBrowserRouter([
         path:"/faq",
         element:<FaqPage></FaqPage>
 
+      },
+      {
+        path:"*",
+        element:<NotFound></NotFound>
+
       }
+
 
 
 
