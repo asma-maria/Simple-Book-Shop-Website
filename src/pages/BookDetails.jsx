@@ -23,7 +23,7 @@ const  BookDetails= () => {
 
   return (
     <div className="book-details">
-      <img src={book.image} alt={book.bookName} />
+      <img src={book?.image} alt={book.bookName} />
       <div className="details">
         <h1>{book.bookName}</h1>
         <p><strong>Author:</strong> {book.author}</p>
