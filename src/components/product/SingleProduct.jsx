@@ -8,6 +8,7 @@ export default function SingleProduct(props) {
   return (
 
       <Link to={ROUTES.SINGLE_PRODUCTS.DYNAMIC(product.bookId)}>
+        
       <div className="card glass w-100 shadow rounded border border-red-100 space-y-4 relative gap-6">
       <figure>
         <img

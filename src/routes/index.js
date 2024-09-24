@@ -4,6 +4,7 @@ export const ROUTES={
     SINGLE_PRODUCTS:{
         STATIC:"/detail/:bookId",
         DYNAMIC: (bookId) => `/detail/${bookId}`,
+    FAQ:"/faq",    
 
     },
     

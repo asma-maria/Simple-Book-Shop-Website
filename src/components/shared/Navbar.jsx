@@ -44,7 +44,7 @@ export default function navbar() {
       <li><Link to={ROUTES.HOME} className='hover:text-orange-600'> Home </Link></li>
       <li><Link to={ROUTES.ABOUT} className='hover:text-orange-600'> About </Link></li>
       <li><a className='hover:text-orange-600'> Blog </a></li>
-      <li><a className='hover:text-orange-600'>FAQ </a></li>
+      <li><Link to="/faq" className='hover:text-orange-600'>FAQ </Link></li>
       <link></link>
     </ul>
   </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Footer from '../components/shared/Footer';
 
 
 export default function ProductsDetailsPage() {
@@ -7,7 +8,7 @@ export default function ProductsDetailsPage() {
     const [book,setBook]=useState()
     console.log(bookId);
     const getSingleBookById = async () => {
-        const data = await fetch("/Book.json");  // Fetch the Book.json file
+        const data = await fetch("/books.json");  // Fetch the Book.json file
         const result = await data.json();        // Parse the JSON response
         const foundBook = result.find(b => b.bookId === parseInt(bookId));  // Find the book that matches the bookId
 
@@ -32,7 +33,8 @@ export default function ProductsDetailsPage() {
       };
   return (
    
-    <div className="card lg:card-side bg-base-100 shadow-xl">
+   <div className='flex flex-col gap-4'>
+     <div className="card lg:card-side bg-base-100 shadow-xl">
       
       <img src={book?.image} alt={book?.bookName} />
       <div className="card-body justify-center">
@@ -50,6 +52,12 @@ export default function ProductsDetailsPage() {
         </div>
       </div>
     </div>
+
+    <div>
+        <Footer></Footer>
+    </div>
+   </div>
+    
 
   )
 };

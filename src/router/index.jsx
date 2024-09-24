@@ -2,9 +2,12 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Homepage from '../pages/Homepage'
 import About from '../components/About'
 import ProductList from '../components/product/ProductList'
-import BookDetails from '../pages/BookDetails'
+
 import ProductsDetailsPage from '../pages/ProductsDetailsPage'
 import { ROUTES } from '../routes'
+
+import FaqPage from '../pages/FaqPage'
+
 
 export const router= createBrowserRouter([
 
@@ -26,6 +29,11 @@ export const router= createBrowserRouter([
       {
         path:`${ROUTES.SINGLE_PRODUCTS.STATIC}`,
         element:<ProductsDetailsPage></ProductsDetailsPage>
+      },
+      {
+        path:"/faq",
+        element:<FaqPage></FaqPage>
+
       }
 
 
