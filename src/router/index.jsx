@@ -8,6 +8,7 @@ import { ROUTES } from '../routes'
 
 import FaqPage from '../pages/FaqPage'
 import NotFound from '../components/NotFound'
+import Blog from '../components/Blog'
 
 
 export const router= createBrowserRouter([
@@ -40,6 +41,10 @@ export const router= createBrowserRouter([
         path:"*",
         element:<NotFound></NotFound>
 
+      },
+      {
+        path:"/blog",
+        element:<Blog></Blog>
       }
 
 
