@@ -7,8 +7,8 @@ import { ROUTES } from '../../routes';
 export default function navbar() {
     
   return (
-    <header className='font-serif drop-shadow-lg '> 
-        <div className="navbar bg-base-100">
+    
+        <div className="navbar bg-base-100 z-10 shadow-lg ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,11 +27,11 @@ export default function navbar() {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a className='hover:text-orange-600'>Home</a></li>
-        <li><a className='hover:text-orange-600'>About</a></li>
-        <li><a className='hover:text-orange-600'> Blog </a></li>
-        <li><a className='hover:text-orange-600'>FAQ </a></li>
+        className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-50">
+          <li><Link to={ROUTES.HOME} className='hover:text-orange-600'> Home </Link></li>
+      <li><Link to={ROUTES.ABOUT} className='hover:text-orange-600'> About </Link></li>
+      <li><Link to="/blog" className='hover:text-orange-600'> Blog </Link></li>
+      <li><Link to="/faq" className='hover:text-orange-600'>FAQ </Link></li>
         
       </ul>
     </div>
@@ -39,13 +39,13 @@ export default function navbar() {
     <Link to={ROUTES.HOME}><img src={logo} alt="Logo" className='w-12 h-12' /></Link>
     <Link to={ROUTES.HOME}><a className="btn btn-ghost text-xl"> BOOK CLUB </a></Link>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center  hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><Link to={ROUTES.HOME} className='hover:text-orange-600'> Home </Link></li>
       <li><Link to={ROUTES.ABOUT} className='hover:text-orange-600'> About </Link></li>
       <li><Link to="/blog" className='hover:text-orange-600'> Blog </Link></li>
       <li><Link to="/faq" className='hover:text-orange-600'>FAQ </Link></li>
-      <link></link>
+      
     </ul>
   </div>
   <div className="navbar-end flex gap-3">
@@ -56,8 +56,6 @@ export default function navbar() {
   </div>
 </div>
 
-     
-    </header>
   )
 }
 

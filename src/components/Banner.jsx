@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <div>
 
-<div className="hero bg-base-200 ">
+<div className="hero bg-base-200  ">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img
       src={brimg}
